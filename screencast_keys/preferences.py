@@ -122,7 +122,7 @@ class ScreencastKeysPreferencesPage:
     def loadSettings(self):
         values = load()
         try:
-            from .bootstrap import get_controller
+            from .screencastkeys import get_controller
             controller = get_controller()
         except ImportError:
             controller = None
@@ -169,7 +169,7 @@ class ScreencastKeysPreferencesPage:
         )
         save(values)
         try:
-            from .bootstrap import get_controller
+            from .screencastkeys import get_controller
             controller = get_controller()
             if controller:
                 controller.reload_settings()
